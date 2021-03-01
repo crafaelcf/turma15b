@@ -6,10 +6,11 @@ public class AppContas {
 
 
         
-        ContaCorrente cc = new ContaCorrente(12345, 100, 50);
+        //ContaCorrente cc = new ContaCorrente(12345, 100, 50);
         ContaEspecial cce = new ContaEspecial(12345, 100, 50);
-        ContaPoupança pp = new ContaPoupança(12345, 100);
-
+        //*ContaPoupança pp = new ContaPoupança(12345, 100);
+        //*ContaPoupança pp = new ContaPoupança(12345, 100);
+        //*ContaPoupança pp = new ContaPoupança(12345, 100);
         
 
         if (cce.setSaque(120)){
