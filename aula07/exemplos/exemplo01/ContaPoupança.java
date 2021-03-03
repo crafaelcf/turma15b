@@ -1,10 +1,10 @@
-package exercicios.exercicio03;
+package exemplos.exemplo01;
 
 public class ContaPoupança extends Conta {
 
 
     double operacao;
-    private static double taxa_poup= 1;
+    final double taxa_poup= 1;
    
 
 
@@ -15,10 +15,17 @@ public class ContaPoupança extends Conta {
 
     }
 
+    ContaPoupança(int numConta){
+
+        super(numConta);
+       
+
+    }
+
 
     public boolean setSaque(double operacao){
 
-        if(operacao+taxa_poup <= getSaldo()){
+        if(operacao <= getSaldo()+taxa_poup){
 
 
             operacao += taxa_poup;
@@ -38,9 +45,16 @@ public class ContaPoupança extends Conta {
 
 
 
-    public void setDeposito(double operacao){
+    public boolean setDeposito(double operacao){
+        if (operacao >0) {
+            super.setDeposito(operacao);
+            return true;
 
-        super.setDeposito(operacao);
+            
+        }else{
+            return false;
+        }
+        
     }
     
 }

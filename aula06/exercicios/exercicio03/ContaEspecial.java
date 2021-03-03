@@ -16,7 +16,7 @@ public class ContaEspecial extends Conta{
 
         if(operacao <= limite + getSaldo()){
 
-            this.limite = limite;
+            limite = limite- (getSaldo()-operacao)  ;
 
            return super.setSaque(operacao);
 
